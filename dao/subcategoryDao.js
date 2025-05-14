@@ -1,8 +1,8 @@
 const Subcategory = require('../models/Subcategory');
 
 exports.create = async (data) => {
-  const Subcategory = new Product(data);
-  return await Subcategory.save();
+  const subcategory = new Subcategory(data);
+  return await subcategory.save();
 };
 
 exports.findAll = async () => {

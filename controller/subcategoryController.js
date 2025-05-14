@@ -3,7 +3,7 @@ const subcategoryService = require('../service/subcategoryService');
 exports.createSubcategory= async (req, res) => {
   try {
     const subcategory = await subcategoryService.createSubcategory(req.body);
-    res.status(201).json(product);
+    res.status(201).json(subcategory);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
