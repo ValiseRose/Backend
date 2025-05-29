@@ -9,7 +9,7 @@ const userSchema = new Schema(
     password: { type: String, required: true },
     api_token: String,
     status: { type: String, required: true },
-    permissions: [{ type: Schema.Types.ObjectId, ref: "Permission" }],
+    // permissions: [{ type: Schema.Types.ObjectId, ref: "Permission" }],
    
   },
   { timestamps: true }

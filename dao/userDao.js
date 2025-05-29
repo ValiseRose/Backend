@@ -18,11 +18,13 @@ const findUserByLogin = async (login) => {
 const findUserByToken = async (token) => {
     let api_token = token;
     // console.log("Token DAO", api_token)
-    return await User.findOne({ api_token }).populate("permissions");
+    return await User.findOne({ api_token })
+    // .populate("permissions");
   };
 // get all Users
 const getAllUsers = async () => {
-    return await User.find({}).populate("permissions");
+    return await User.find({})
+    // .populate("permissions");
   };
   const updateJwtToken = async (id, token) => {
     return await User.findByIdAndUpdate({ _id:id }, {
@@ -41,7 +43,9 @@ const deleteUser = async (id) => {
 };
 
 const getUserById = async (_id) => {
-  return await User.findById(_id).populate('permissions').exec();
+  return await User.findById(_id)
+  // .populate('permissions')
+  .exec();
 };
 
 const getUserByEmail = async (email) => {

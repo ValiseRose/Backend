@@ -47,3 +47,11 @@ exports.deleteSubcategory = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+exports.getSubcategoriesAndSubsubcategoriesByCategoryId = async (req, res) => {
+  try {
+    const result = await subcategoryService.getSubcategoriesAndSubsubcategoriesByCategoryId(req.params.categoryId);
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

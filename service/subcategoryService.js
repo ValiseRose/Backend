@@ -19,3 +19,6 @@ exports.updateSubcategory = async (id, subcategoryData) => {
 exports.deleteSubcategorys = async (id) => {
   return await subcategoryDao.remove(id);
 };
+exports.getSubcategoriesAndSubsubcategoriesByCategoryId = async (categoryId) => {
+  return await subcategoryDao.getSubcategoriesAndSubsubcategoriesByCategoryId(categoryId);
+};

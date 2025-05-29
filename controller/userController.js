@@ -19,7 +19,7 @@ exports.createUser = async (req, res) => {
       password,
       api_token,
       status,
-      permissions,
+      // permissions,
     } = req.body;
 
     let user = await userService.createUser({
@@ -29,7 +29,7 @@ exports.createUser = async (req, res) => {
       password,
       api_token,
       status,
-      permissions,
+      // permissions,
     });
     res.json(user);
   } catch (error) {
@@ -47,7 +47,7 @@ exports.updateUser = async (req, res) => {
       password,
       api_token,
       status,
-      permissions,
+      // permissions,
     } = req.body;
 
     let user = await userService.updateUser(userId, {
@@ -57,7 +57,7 @@ exports.updateUser = async (req, res) => {
         password,
         api_token,
         status,
-        permissions,
+        // permissions,
     });
     res.json(user);
   } catch (error) {
